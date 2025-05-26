@@ -13,7 +13,14 @@ struct AlphetApp: App {
     init() {
         UITabBar.appearance().barTintColor = UIColor(Color.mirrorBlack)
         UITabBar.appearance().backgroundColor = UIColor(Color.mirrorBlack)
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UITabBar.appearance().tintColor = UIColor(Color.accentIridescent)
+
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor(Color.textPrimary)
+        ]
+        UINavigationBar.appearance().titleTextAttributes = [
+            .foregroundColor: UIColor(Color.textPrimary)
+        ]
     }
     var body: some Scene {
         WindowGroup {
@@ -21,4 +28,3 @@ struct AlphetApp: App {
         }
     }
 }
-

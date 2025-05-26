@@ -13,15 +13,19 @@ struct GlassCard<Content: View>: View {
 
     var body: some View {
         ZStack {
-            VisualEffectView(effect: UIBlurEffect(style: .systemThinMaterialDark)) {
-                EmptyView()
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: 25)
-                    .stroke(Color.white.opacity(0.1), lineWidth: 1)
-            )
-            .shadow(color: Color.black.opacity(0.6), radius: 10, x: 0, y: 10)
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
+                .fill(Color.glassWhite)
+                .background(
+                    VisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterialDark)) {
+                        EmptyView()
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: 25)
+                        .stroke(Color.accentIridescent.opacity(0.2), lineWidth: 1.2)
+                )
+                .shadow(color: Color.accentIridescent.opacity(0.35), radius: 8, x: 0, y: 6)
 
             content()
                 .padding()

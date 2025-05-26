@@ -8,11 +8,12 @@
 import SwiftUI
 
 extension Color {
-    static let mirrorBlack = Color(red: 10/255, green: 10/255, blue: 10/255)
-    static let glassWhite = Color.white.opacity(0.05)
-    static let accentBlue = Color.blue.opacity(0.6)
-    static let textPrimary = Color.white
-    static let textSecondary = Color.gray
+    static let mirrorBlack = Color(red: 5/255, green: 5/255, blue: 8/255)
+    static let glassWhite = Color.white.opacity(0.03)
+    static let accentIridescent = Color(red: 180/255, green: 85/255, blue: 255/255)
+    static let highlightNeon = Color(red: 0/255, green: 255/255, blue: 200/255)
+    static let textPrimary = Color(red: 240/255, green: 240/255, blue: 255/255)
+    static let textSecondary = Color(red: 150/255, green: 150/255, blue: 180/255)
 }
 extension Font {
     static let heading = Font.system(size: 24, weight: .semibold, design: .rounded)
